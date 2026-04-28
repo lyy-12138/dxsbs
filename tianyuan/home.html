@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>红色大门</title>
+    <link rel="stylesheet" href="red.css">
+</head>
+<body>
+    <div class="page-bg"></div>
+    <div class="door" id="doorContainer">
+        <div class="door-left"></div>
+        <div class="door-right"></div>
+        <div class="doorknob" id="doorBtn"></div>
+        <div class="ripple-container" id="rippleContainer"></div>
+        <script>
+        const rippleContainer = document.getElementById('rippleContainer');
+        rippleContainer.innerHTML = '';
+        for (let i = 0; i < 3; i++) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            ripple.style.animationDelay = `${i * 0.5}s`;
+            rippleContainer.appendChild(ripple);
+        }
+
+       const doorBtn = document.getElementById('doorBtn');
+        const doorContainer = document.getElementById('doorContainer');
+        let isAnimating = false;
+
+        doorBtn.addEventListener('click', () => {
+            if (isAnimating) return;
+            isAnimating = true;
+            doorContainer.classList.add('open');
+            setTimeout(() => {
+               window.location.href = "../layout/two.html"/*跳转下一页面*/
+            }, 10);
+        })
+    </script>
+    </div>
+</body>
+</html>
