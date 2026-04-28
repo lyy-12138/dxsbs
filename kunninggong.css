@@ -1,0 +1,465 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+body {
+    background-color: #f8f5f0;
+    background-size: cover;
+    padding-top: 50px;
+    position: relative;
+    min-height: 100vh;
+}
+#first .dhl{
+    width: 100vw;
+    position: relative;
+    z-index: 9999;
+}
+.dhl {
+    width: 1980px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #8c0008;
+    margin: 0 auto;
+    overflow: visible;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.dhl a {
+    font-family: 黑体;
+   color: #fff;
+    font-style: normal;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+    transition: color 0.3s;
+}
+.tp1 {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.da1 {
+    height: 60px;
+    padding: 0 25px;
+    background-color: transparent;
+    margin: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: relative;
+}
+.da2 {
+    height: 60px;
+    padding: 0 25px;
+    background-color: transparent;
+    margin: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: relative;
+}
+.da3 {
+    height: 60px;
+    padding: 0 25px;
+    background-color: transparent;
+    margin: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: relative;
+}
+.da1:hover, .da2:hover, .da3:hover {
+    background-color: #b9000b;
+}
+.da3 ul {
+   display: none;
+   flex-direction: row;
+   position: absolute;
+   top:60px;
+   left: 50%;
+   transform: translateX(-50%);
+   list-style: none;
+  background-color: #8c0008;
+   padding: 0;
+   margin: 0;
+   white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+   border-radius: 0 0 8px 8px;
+   overflow: hidden;
+}
+.da3:hover ul{
+    display: flex;
+}
+.da3 ul li{
+   display: flex;
+}
+.da3 ul li a {
+    width: 90px;
+    height: 44px;
+    color: #fff;
+    line-height: 44px;
+    font-size: 16px;
+    display: block; 
+    text-align: center;
+    text-decoration: none;
+}
+.da3 ul li a:hover {
+    background-color: #b9000b;
+}
+.da4 {
+    width: 120px;
+    height: 50px;
+    margin-left: 40px;
+    background-color: aqua;
+    float: left;
+}
+.da5 {
+    width: 60px;
+    height: 50px;
+    margin-left: 40px;
+    background-color: aqua;
+    float: left;
+}
+.second{
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.second img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    object-position:  center;
+    transition: all 0.3s ease;
+}
+.second::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  opacity: 0;
+  transition: opacity  0.4s;
+  z-index: 1;
+  pointer-events: none;
+}
+.second .img-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;  
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  opacity: 0; 
+  background: rgba(0,0,0,0.6);
+  transform: translateY(0px);
+  transition: all 0.4s ease; 
+  z-index: 2;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+.second:hover::after{
+  opacity: 1; 
+}
+.second:hover .img-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.second:hover img{
+    transform: scale(1.05);
+}
+.third{
+width: 100%;
+height: 550px;/*可改*/
+}
+.t1{
+    position: relative;
+ margin: 0 auto 0px; 
+  text-align: center; 
+  position: relative;
+  width: 350px;
+  height: 150px;
+   justify-content: center;
+   margin-top: -10px;
+   
+}
+.t1 img{
+width: 100%;
+height: 100%;
+display: block;
+}
+.content{
+    position: absolute;
+    top: 58%;        
+  left: 50%;       
+  transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 0; 
+   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.content h2{
+    color:#b82626;
+    margin: 0;
+    text-align: center;
+     margin: 0 auto 20px;
+}
+.tt1{
+    width: 100%;
+    height: 410px;
+    display: flex;
+    flex-direction: row; 
+    box-sizing: border-box;
+    gap: 10px;
+     border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.p1{
+    width: 60%;
+    height: 410px;
+    overflow: hidden;
+}
+.p1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    object-position:  center;
+    border-radius: 8px 8px 8px 8px;
+}
+.p2{
+    width: 40%;
+    height: 240px;
+    margin-top: 120px;
+}
+.forth{
+    width: 100%;
+    height: 650px;
+}
+.t2{
+    width: 98%;
+    height: 540px;
+    margin-left: 5%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10px;
+    gap: 30px;
+    flex-direction: row;
+    padding: 0 5%; 
+    background-color: f6f5f5;
+     border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.l1{
+    width: 40%;
+    height: 460px;
+    background-color: antiquewhite;
+    margin-top: -20px;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.l2{
+     width: 40%;
+    height: 460px;
+    margin-top: -20px;
+    background-color: antiquewhite;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.ll1{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    align-items: flex-start;
+    justify-content:center;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    background: url(./kunninggong/kunninggong2.png)  no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+.ll3{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    align-items: flex-start;
+    justify-content:center;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    background: url(./kunninggong/ming_dynasty.pic.jpg)  no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+.ll2{
+    width: 100%;
+    height: 20%;
+    margin-top: 10px;
+    line-height: 2;
+    text-align: left;}
+.ll2 p{
+    font-size: 15px;
+    color: rgb(1, 10, 10);
+    line-height: 1.5;
+}
+.fifth{
+    width: 100%;
+    height: 700px;
+    background-color:#f8f5f0;
+}
+.o1{
+    position: relative;
+ margin: 0 auto 0px; 
+  text-align: center; 
+  position: relative;
+  width: 350px;
+  height: 150px;
+ justify-content: center;
+ top: -30px;
+}
+.o1 img{
+width: 100%;
+height: 100%;
+display: block;
+}
+.o2{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    top: -57px;
+    position: relative;
+    background-color: f6f5f5;
+     border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.k1{
+    width: 33%;
+    height: 540px;
+background-color: antiquewhite;
+    border-radius: 8px 8px 8px 8px;
+}
+.kk1{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    align-items: flex-start;
+    justify-content:center;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    background: url(./kunninggong/east_warm_pavilion.pic.jpg) no-repeat center center;
+    position: relative;
+    background-size: cover;
+}
+.kk3{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    background-color:#f8f5f0;
+    align-items: flex-start;
+    justify-content:center;
+    border-radius: 8px 8px 0 0;
+     overflow: hidden;
+     background: url(./kunninggong/sacrifice.pic.jpg);
+      background-size: cover; 
+      position: relative;
+}
+.kk4{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    align-items: flex-start;
+    justify-content:center;
+    border-radius: 8px 8px 0 0;
+     overflow: hidden;
+     background: url(./kunninggong/west.pic.jpg)no-repeat center top;
+    position: relative;
+    background-size: cover;
+}
+.kk1,.kk3,.kk4{
+    color: #F5A623;
+}
+.kk2{
+    width: 100%;
+    height: 20%;
+    line-height: 1.7;
+   text-align: left;
+}
+.kk2 p{
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    text-indent: 2em; 
+    line-height: 1.7;
+}
+.sixth{
+    width: 100%;
+    height: 280px;
+}
+.j1{
+    width: 100%;
+    height: 80px;
+    margin-top: -60px;
+}
+.j1 p{
+    font-size: 15px;
+    color: black;
+    line-height: 1.0;
+    text-indent: 2em;
+}
+.jiewei {
+    max-width: 1980px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+   background-color: #8c0008;
+    color: #fff;
+    padding: 25px 20px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+.jiewei ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.jiewei ul li:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0;
+}
+.jiewei ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    padding: 0;
+}
