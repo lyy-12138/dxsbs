@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "KaiTi", "STKaiti", serif;
+    background: #fff8f8;
+    color: #2b1a12;
+    line-height: 2.3;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+}
+
+#first {
+    width: 100vw;
+    margin: 0 auto;
+    background: none;
+}
+#first .dhl{
+    width: 100vw;
+    position: relative;
+    z-index: 9999;
+}
+.dhl {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8c0008;
+    margin: 0 auto;
+    overflow: visible;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.dhl a {
+    font-family: "黑体", sans-serif;
+    color: #fff;
+    font-style: normal;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+    transition: color 0.3s;
+}
+
+.tp1 {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tp1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+.da1, .da2, .da3 {
+    height: 60px;
+    padding: 0 25px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: relative;
+    color: #fff;
+    font-family: "黑体", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.da1:hover, .da2:hover, .da3:hover {
+    background-color: #b9000b;
+}
+
+/* 下拉菜单 修复 + 横向排列 */
+.da3 ul {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    background-color: #8c0008;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    z-index: 9999;
+}
+.da3:hover ul{
+    display: flex;
+}
+.da3 ul li{
+    display: flex;
+}
+.da3 ul li a {
+    width: 90px;
+    height: 44px;
+    color: #fff;
+    line-height: 44px;
+    font-size: 16px;
+    display: block; 
+    text-align: center;
+    text-decoration: none;
+}
+.da3 ul li a:hover {
+    background-color: #b9000b;
+}
+
+/* 卷轴开场动画 */
+.scroll-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #a81c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: closeScroll 2.4s ease forwards 4s;
+}
+@keyframes closeScroll {
+    to { top: -120%; opacity: 0; visibility: hidden; }
+}
+.scroll-text {
+    font-family: "KaiTi", "STKaiti", serif;
+    font-size: 120px;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 0 0 15px #ffd700, 0 0 50px #ffd700, 0 0 80px #ffb347;
+    letter-spacing: 26px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards 1s;
+}
+@keyframes fadeIn { to { opacity: 1; } }
+
+/* 右侧目录 */
+.nav {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 3px solid #b92b2b;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    width: 170px;
+    padding: 14px 10px;
+    z-index: 100;
+}
+.nav h3 {
+    color: #b92b2b;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ffd700;
+}
+.nav a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px 0;
+    text-align: center;
+    transition: all 0.35s ease;
+    padding: 5px 0;
+    border-radius: 6px;
+}
+.nav a:hover {
+    color: #fff;
+    background: #b92b2b;
+    transform: scale(1.08);
+    font-weight: bold;
+}
+
+/* 返回顶部 */
+#backTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #b92b2b;
+    color: #ffd700;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 100;
+}
+#backTop.show { opacity: 1; }
+
+/* 横幅 */
+.banner {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background: url("images2/qjt.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner::after {
+    content: "";
+    position: absolute;
+    top:0;left:0;
+    width:100%;height:100%;
+    background: rgba(140, 0, 0, 0.5);
+}
+.main-title {
+    position: relative;
+    z-index: 2;
+    font-size: 86px;
+    color: #fff;
+    letter-spacing: 24px;
+    text-shadow: 0 0 8px #ffd700,0 0 20px #ffd700,0 0 40px #ffb347;
+}
+
+/* 容器：全局左右留白 */
+.container {
+    max-width: 1500px;
+    margin: 80px auto;
+    padding: 0 90px;
+}
+.sec-title {
+    font-size: 46px;
+    color: #b92b2b;
+    text-align: center;
+    margin: 130px 0 60px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid #ffd700;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.15);
+}
+
+/* 箭头 */
+.arrow-down {
+    text-align: center;
+    font-size: 90px;
+    color: #c93737;
+    font-weight: bold;
+    line-height: 1;
+    margin: 40px 0;
+}
+
+/* 单列文字盒子（居中+间距） */
+.single-box {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 45px 65px;
+    background: #ffffff;
+    border: 2px solid #c93737;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.single-box p {
+    font-size: 22px;
+    text-align: justify;
+    line-height: 2.4;
+}
+
+/* 排版差异化：三列 / 两列 / 左图右文 / 右图左文 */
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 50px 0;
+}
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* 左图右文 / 右图左文 */
+.grid-img-text {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    align-items: center;
+    gap: 40px;
+    margin: 70px 0;
+}
+.grid-text-img {
+    grid-template-columns: 1.6fr 1fr;
+}
+
+/* 卡片：上图下文 */
+.card {
+    background: #fff;
+    border: 2px solid #c93737;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: 0.35s;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.16);
+}
+.card h3 {
+    color: #b92b2b;
+    margin-bottom: 20px;
+    font-size: 27px;
+    text-align: center;
+}
+.card p {
+    font-size: 20px;
+    line-height: 2.2;
+    text-align: justify;
+}
+.card-img-top {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 图片外框样式 */
+.img-box {
+    background: #fff;
+    border: 2px solid #c93737;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: 0.35s;
+}
+.img-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.16);
+}
+.side-img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* 打字动画 */
+.write-in {
+    opacity: 0;
+    border-right: 2px solid #b92b2b;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.footer {
+    background: #9c1c1c;
+    color: #ffd700;
+    text-align: center;
+    padding: 65px 0;
+    margin-top: 150px;
+    font-size: 19px;
+}
+
+
+.jiewei {
+    max-width: 1980px;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+   background-color: #8c0008;
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+.jiewei ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.jiewei ul li:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.jiewei ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
