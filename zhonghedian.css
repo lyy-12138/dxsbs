@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  body {
+  font-family: "微软雅黑", 黑体, sans-serif; 
+  background-color: #e8e0d1;
+  }
+#first .dhl{
+    width: 100vw;
+    position: relative;
+    z-index: 9999;
+}
+.dhl {
+    width: 1980px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #8c0008;
+    margin: 0 auto;
+    overflow: visible;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.dhl a {
+    font-family: 黑体;
+   color: #fff;
+    font-style: normal;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+    transition: color 0.3s;
+}
+.tp1 {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.da1 {
+    height: 60px;
+    padding: 0 25px;
+    background-color: transparent;
+    margin: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: relative;
+}
+.da2 {
+    height: 60px;
+    padding: 0 25px;
+    background-color: transparent;
+    margin: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: relative;
+}
+.da3 {
+    height: 60px;
+    padding: 0 25px;
+    background-color: transparent;
+    margin: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: relative;
+}
+.da1:hover, .da2:hover, .da3:hover {
+    background-color: #b9000b;
+}
+.da3 ul {
+   display: none;
+   flex-direction: row;
+   position: absolute;
+   top:60px;
+   left: 50%;
+   transform: translateX(-50%);
+   list-style: none;
+  background-color: #8c0008;
+   padding: 0;
+   margin: 0;
+   white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+   border-radius: 0 0 8px 8px;
+   overflow: hidden;
+}
+.da3:hover ul{
+    display: flex;
+}
+.da3 ul li{
+   display: flex;
+}
+.da3 ul li a {
+    width: 90px;
+    height: 44px;
+    color: #fff;
+    line-height: 44px;
+    font-size: 16px;
+    display: block; 
+    text-align: center;
+    text-decoration: none;
+}
+.da3 ul li a:hover {
+    background-color: #b9000b;
+}
+.da4 {
+    width: 120px;
+    height: 50px;
+    margin-left: 40px;
+    background-color: aqua;
+    float: left;
+}
+.da5 {
+    width: 60px;
+    height: 50px;
+    margin-left: 40px;
+    background-color: aqua;
+    float: left;
+}
+.second{
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+   margin: 0 auto;
+}
+.second img{
+    display: block;
+    height: 100%;
+   width: 100%;
+   object-fit: cover;
+    transition: transform 0.6s ease;
+    transform-origin: center center;
+}
+.second img:hover{
+    transform: scale(1.1);
+}
+.third{
+    width: 100%;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+     padding: 20px 0;
+    box-sizing: border-box;
+}
+.b3{
+    position: relative;
+ margin: 0 auto 20px; 
+  text-align: center; 
+  position: relative;
+  width: 250px;
+  height: 150px;
+   justify-content: center;
+   display: flex; 
+}
+
+.b3 img{
+width: 100%;
+height: 100%;
+display: block;
+}
+.content{
+    position: absolute;
+    top: 55%;        
+  left: 50%;       
+  transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 0; 
+   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.content h2{
+    color:#b82626;
+    margin: 0;
+    text-align: center;
+     margin: 0 auto 20px;
+}
+.jj{
+    width: 100%;
+    min-height: 0px;
+    background-color: bisque;
+    margin-top: 0;
+     padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 2%;
+    align-items: flex-start;
+}
+
+.jj1{
+    width: 37%;
+    height: 400px;
+    background-color: rgb(228, 154, 63);
+    border: 1px solid #999;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.jj1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.jj2{
+    width: 63%;
+    margin-right: 0;
+     min-height: 100px;
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+  line-height: 1.8;      
+  color: #333;            
+  text-indent: 2em;       
+  letter-spacing: 1px;   
+  text-align: justify; 
+  margin-top: 10px;
+}
+.forth{
+    width: 100%;
+    min-height: 350px;
+
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.b4{
+    position: relative;
+ margin: 0 auto 20px; 
+  text-align: center; 
+  position: relative;
+  width: 250px;
+  height: 150px;
+   justify-content: center;
+}
+.b4 img{
+width: 100%;
+height: 100%;
+display: block;
+}
+.ff1{
+   position: absolute;
+    top: 50%;        
+  left: 50%;       
+  transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 0; 
+   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.ff1 h2{
+    color:#b82626;
+    margin: 0;
+    text-align: center;
+}
+.ff2{
+  width: 100%;
+ max-height: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.a1, .a2, .a3 {
+    width: 32%;
+    min-height: 400px;
+    background-color: beige;
+    position: relative; 
+    overflow: hidden;  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.a1 img,.a5 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aa1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    border-radius: 8px;
+    padding: 6px 30px;
+    z-index: 2;
+    height: 3%;
+}
+.aa1 p {
+    margin: 0;
+    font-size: 20px;
+    color: #b82626;
+    font-weight: bold;
+    text-align: center;
+}
+.a2 img, .a3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo1{
+    width: 100%;
+    height: 97%;
+    overflow: hidden;
+    background-color: #333;
+    margin-top: 15%;
+}
+.photo1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    object-position:  center;
+}
+.hover-text-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.a2:hover .hover-text-box, 
+.a3:hover .hover-text-box 
+{
+    opacity: 1;
+}
+
+.hover-inner {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+.ff3 {
+  width: 100%;
+ max-height: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.a4, .a5, .a6 {
+    width: 32%;
+    min-height: 400px;
+    background-color: beige;
+    position: relative; 
+    overflow: hidden;  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.a4 img, .a6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hover-text-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+.a4:hover .hover-text-box, 
+.a6:hover .hover-text-box {
+    opacity: 1;
+}
+.hover-inner {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+.jiewei {
+    max-width: 1980px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+   background-color: #8c0008;
+    color: #fff;
+    padding: 25px 20px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+.jiewei ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.jiewei ul li:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0;
+}
+.jiewei ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    padding: 0;
+}
